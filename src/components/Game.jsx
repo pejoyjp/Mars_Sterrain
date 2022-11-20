@@ -31,16 +31,10 @@ function Game(props) {
             }
         }
         
-        /*
-
-        if (position.x >= props.row) {
-            position.x = props.row - 1
+       if (position.x >= props.row || position.y >= props.column ||position.x <0 ||position.y < 0) {
+            return alert("The robot fell into a pit on Mars!")
         }
 
-        if (position.y >= props.column) {
-            position.y = props.column - 1
-        }
-        */
         console.log(position.x,position.y)
 
         setGameMap(prev => {
